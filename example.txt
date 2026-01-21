@@ -1,0 +1,20 @@
+# adding
+
+task-cli add "Task 1" --description "First task" # add new task to json file
+
+# updating
+
+task-cli update 1 "Task 2" # change Task number 1 from "Task 1" to "Task 2" from json file
+
+# deleting
+
+task-cli delete 1 # delete task have id: 1 ("Task 2") from json file
+
+# marking
+
+task-cli mark-in-progress 1 # switch task that have id: 1 ("Task 2") from Todo column to Doing column
+task-cli mark-done 1 # switch task that have id: 1 ("Task 2") from Doing column or Todo column to Done column
+
+# listing
+
+task-cli list # print a simple table that listing all tasks

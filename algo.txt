@@ -1,0 +1,79 @@
+/*
+ * My pseudo code to create a Task Manager (Kanban) CLI in PHP
+*/
+
+
+import TaskManager;
+
+program Main
+
+	Execute();
+
+end program Main
+
+-----------------------------------------
+
+program Task
+
+	define(task_name, task_status, task_id, task_discription, task_entered_date, task_completed_date);
+
+end program Task
+
+-----------------------------------------
+
+import Task
+
+program TaskManager
+
+	function execute() {
+		if(number of input arguments in the cmd < 1) {
+			print("ERROR");
+		}
+
+		if(first argument is add and second argument is string /* task name */ and third argument is "--description" and fourth argument is string /* task description */) {
+			task_name = argv[2] /* second argument */;
+			
+			add_task(task_name);
+		} else if(first argument is update and second argument is id (int number) /* task id */ and third argument is string /* the new task name the user want to update it */ fourth is null) {
+			task_name = argv[3] /* third argument */;
+			task_id = argv[2] /* second argument */;
+			
+			update_task(task_name, task_id);
+		} else if(first argument is delete and second argument is id (int number) /* task id */ and third argument is null) {
+			task_id = argv[2] /* second argument */;
+			
+			delete_task(task_id);
+		}
+	}
+
+	function add_task(task_name) {
+		if(task_name is not empty string or task_name is not null) {
+			push_to_json_file(task_name, task_id++);
+		} else {
+			print("Error: task name is empty");
+		}
+	}
+
+	function update_task(task_name, task_id) {
+		if(task_name is not empty string or task_name is not null) {
+			if(task_id > 0) {
+				foreach(task_id as id) {
+					if(json_file is have id) {
+						task_name = new inputed task_name from user
+					}
+				}
+			}
+		}
+	}
+
+	function delete_task(task_id) {
+		foreach(task_id as id) {
+			if(json_file is have id) {
+				remove(task_name and task_id have id) from json_file;
+			}
+		}
+	}
+
+end program TaskManager
+
+-----------------------------------------
