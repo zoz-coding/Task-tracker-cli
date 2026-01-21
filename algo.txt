@@ -7,7 +7,7 @@ import TaskManager;
 
 program Main
 
-	Execute();
+	execute();
 
 end program Main
 
@@ -32,6 +32,7 @@ program TaskManager
 
 		if(first argument is add and second argument is string /* task name */ and third argument is "--description" and fourth argument is string /* task description */) {
 			task_name = argv[2] /* second argument */;
+			task_description = argv[3] /* third argument */;
 			
 			add_task(task_name);
 		} else if(first argument is update and second argument is id (int number) /* task id */ and third argument is string /* the new task name the user want to update it */ fourth is null) {
