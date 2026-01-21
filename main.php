@@ -46,8 +46,12 @@
 						$task_manager->delete_task($id);
 					}
 					break;
+				case "mark-in-progress":
+					$task_manager->mark($argv[2] ?? 0, "in-progress");
+					break;
 				case "mark-done":
 					$task_manager->mark($argv[2] ?? 0, "done");
+					break;
 				case "list":
 					$task_manager->list_tasks();
 					break;
