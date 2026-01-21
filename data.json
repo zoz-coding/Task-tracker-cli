@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Task 1",
+        "status": "done",
+        "description": "",
+        "createdAt": "2026-01-21 10:04:57",
+        "doneAt": "2026-01-21 10:12:46"
+    },
+    {
+        "id": 2,
+        "name": "Task 2",
+        "status": "done",
+        "description": "Hello World!",
+        "createdAt": "2026-01-21 10:08:17",
+        "doneAt": "2026-01-21 10:12:58"
+    }
+]
