@@ -3,7 +3,7 @@ Task tracker that working in CLI (Command line interface) made by using php prog
 
 <a>https://roadmap.sh/projects/task-tracker</a>
 
-bash'''
+```bash
 # Adding a new task
 task-cli add "Buy groceries"
 # Output: Task added successfully (ID: 1)
@@ -24,4 +24,4 @@ task-cli list done
 task-cli list todo
 task-cli list in-progress
 
-'''
+```
