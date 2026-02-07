@@ -5,23 +5,18 @@ Task tracker that working in CLI (Command line interface) made by using php prog
 
 ```bash
 # Adding a new task
-task-cli add "Buy groceries"
+php task-cli.php add "Buy groceries"
 # Output: Task added successfully (ID: 1)
 
 # Updating and deleting tasks
-task-cli update 1 "Buy groceries and cook dinner"
-task-cli delete 1
+php task-cli.php update 1 "Buy groceries and cook dinner"
+php task-cli.php delete 1
 
 # Marking a task as in progress or done
-task-cli mark-in-progress 1
-task-cli mark-done 1
+php task-cli.php mark-in-progress 1
+php task-cli.php mark-done 1
 
 # Listing all tasks
-task-cli list
-
-# Listing tasks by status
-task-cli list done
-task-cli list todo
-task-cli list in-progress
+php task-cli.php list
 
 ```
